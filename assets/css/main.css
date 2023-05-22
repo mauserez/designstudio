@@ -1,0 +1,15 @@
+:root {
+	--color-white: #ffffff;
+	--color-gold: #e3b873;
+	--color-black: #181818;
+	--color-gray: #363636;
+	--color-lightgray: #959595;
+
+	--bg-black: #131313;
+	--bg-gold: #e3b873;
+	--bg-white: #fff;
+}
+
+body {
+	font-family: NuniSans, Helvetica, Arial, Helvetica, sans-serif;
+}

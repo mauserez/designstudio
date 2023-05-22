@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Design Studio</title>
+		<link
+			type="image/x-icon"
+			href="/assets/icons/header/logo.svg"
+			rel="shortcut icon"
+		/>
+		<link type="Image/x-icon" href="/assets/icons/header/logo.svg" rel="icon" />
+		<link rel="stylesheet" href="../assets/css/reset.css" />
+		<link rel="stylesheet" href="../assets/css/font.css" />
+		<link rel="stylesheet" href="../assets/css/header.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+</head>
+
+<style>
+	.bg-image {
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	.bg-white {
+		background-color: var(--bg-white);
+	}
+
+	.bg-black {
+		background-color: var(--bg-black);
+	}
+
+	.section-content {
+		width: 1236px;
+		margin: 0 auto;
+	}
+
+	.section-title {
+		font-family: "YesevaOne";
+		text-transform: uppercase;
+	}
+
+	button {
+		color: var(--color-white);
+		background: var(--bg-gold);
+		box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+		border-radius: 2px;
+		text-align: center;
+		text-transform: uppercase;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s, transform 0.4s;
+	}
+
+	button:hover {
+		transform: scale3d(1.025, 1.025, 1);
+	}
+
+	.italic {
+		font-style: italic;
+	}
+
+	.color-white {
+		color: var(--color-white);
+	}
+
+	.gold-color {
+		color: var(--color-gold);
+	}
+
+	.content-button {
+		padding: 19px 41px;
+	}
+
+	.transparent-button {
+		background: transparent;
+		box-shadow: none;
+		border: 1px solid var(--color-white);
+	}
+
+	.transparent-button:hover {
+		background-color: var(--bg-gold);
+	}
+
+	@media screen and (max-width: 1299px) {
+		.section-content {
+			width: 100%;
+		}
+
+		.section-content__body {
+			margin: 0 auto;
+		}
+
+		header,
+		main,
+		footer {
+			width: 100%;
+		}
+
+		.header-nav {
+			width: 100%;
+		}
+
+		.sm-full-width {
+			width: 100vw;
+		}
+
+		main > * {
+			padding-left: 18px;
+			padding-right: 18px;
+		}
+	}
+
+	.hero-wrap {
+		background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.7) 0%,
+				rgba(0, 0, 0, 0.7) 100%
+			),
+			url(/assets/img/hero.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.hero {
+		width: 1204px;
+		align-content: center;
+		padding-top: 194px;
+		padding-bottom: 208px;
+		color: var(--color-white);
+	}
+
+	.hero__title {
+		font-size: 40px;
+		line-height: 53px;
+		margin-bottom: 16px;
+	}
+
+	.hero__text {
+		font-family: "NuniSans";
+		font-size: 22px;
+		line-height: 36px;
+		color: var(--color-white);
+		margin-bottom: 32px;
+	}
+
+	.hero > * {
+		max-width: 520px;
+	}
+
+	.hero__buttons {
+		display: flex;
+		row-gap: 24px;
+		column-gap: 20px;
+	}
+
+	@media screen and (max-width: 1299px) {
+		.hero {
+			width: 100%;
+			padding-top: 85px;
+			padding-bottom: 61px;
+		}
+
+		.hero__title {
+			font-size: 23px;
+			line-height: 132.83%;
+		}
+
+		.hero__text {
+			font-size: 14px;
+			line-height: 135.84%;
+		}
+
+		.hero__buttons {
+			flex-direction: column;
+		}
+	}
+
+	.projects {
+		background: var(--bg-black);
+		width: 1171px;
+		padding-top: 107px;
+		padding-bottom: 257px;
+	}
+
+	.projects__info-gallery > * {
+		display: grid;
+		grid-template-columns: 442px 1fr;
+		gap: 50px;
+	}
+
+	.projects__buttons {
+		display: flex;
+		font-family: "YesevaOne";
+		font-size: 14px;
+		line-height: 19px;
+		text-transform: uppercase;
+		column-gap: 60px;
+		margin-bottom: 45px;
+	}
+
+	.projects__button {
+		color: rgba(255, 255, 255, 0.3);
+		padding-bottom: 6px;
+		cursor: pointer;
+		transition: color 0.3s;
+	}
+
+	.projects__button:hover {
+		color: var(--color-gold);
+	}
+
+	.projects__button-active {
+		color: var(--color-gold);
+		border-bottom: 1px solid var(--color-gold);
+	}
+
+	.projects__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.projects__info-gallery {
+		margin-bottom: 90px;
+	}
+
+	.projects__title {
+		font-family: YesevaOne;
+		font-size: 27px;
+		line-height: 37px;
+		letter-spacing: -0.07em;
+		text-transform: uppercase;
+		color: var(--color-gold);
+		margin-bottom: 34px;
+	}
+
+	.projects__text {
+		font-size: 14px;
+		line-height: 27px;
+		color: var(--color-white);
+		margin-bottom: 42px;
+	}
+
+	.projects-details__sample {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 34px;
+	}
+
+	.projects-details__title {
+		font-family: "YesevaOne";
+		font-size: 18px;
+		line-height: 25px;
+		text-transform: uppercase;
+		color: var(--color-gold);
+	}
+
+	.projects-details__text {
+		font-size: 13px;
+		line-height: 21px;
+		color: var(--color-white);
+	}
+
+	.projects__big-slider-buttons {
+		margin-top: 80px;
+		display: flex;
+		column-gap: 20px;
+		align-items: center;
+	}
+
+	.projects__big-slider-buttons > * {
+		cursor: pointer;
+	}
+
+	.projects__big-slider-dot {
+		background: rgba(255, 255, 255, 0.3);
+		border-radius: 30px;
+		width: 9.5px;
+		height: 9.5px;
+	}
+
+	.projects__big-slider-dot-active {
+		background-color: #fff;
+	}
+</style>
+<body>
+	<header class="sm-full-width">
+		<section class="header-section">
+			<section class="header__wrap">
+				<div class="header__logo">IC "Repair Design Project"</div>
+				<ul class="header__nav">
+					<li class="header__nav-item">home</li>
+					<li class="header__nav-item">projects</li>
+					<li class="header__nav-item">measurement</li>
+					<li class="header__nav-item">team</li>
+					<li class="header__nav-item">reviews</li>
+					<li class="header__nav-item">contacts</li>
+				</ul>
+				<div class="header__contact">
+					<a href="tel:+79287683239">+7 (928) 768-32-39</a>
+					<button class="header__button italic">Request a call</button>
+				</div>
+			</section>
+		</section>
+	</header>
+	<main>
+		<section class="hero-wrap bg-image">
+			<div class="section-content hero">
+				<div class="section-content__body">
+					<div class="hero__title section-title">
+						Turnkey Repair in the<br />
+						city of <span class="gold-color">Rostov-on-Don</span>
+					</div>
+					<div class="hero__text">
+						Get ready-made turnkey repairs on time<br />
+						with work time saving up to 45 days and<br />
+						20% from cost of materials due to the organization of work
+					</div>
+					<div class="hero__buttons">
+						<button class="content-button italic">calculate the cost</button>
+						<button class="content-button transparent-button italic">
+							submit your application
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-black">
+			<div class="section-content projects">
+				<div class="section-content__body">
+					<div class="projects__body">
+						<div class="projects__info-gallery">
+							<div>
+								<div class="projects__buttons-push">&nbsp;</div>
+								<div class="projects__buttons">
+									<div class="projects__button projects__button-active">
+										Rostov-on-Don, Admiral
+									</div>
+									<div class="projects__button">Sochi Thieves</div>
+									<div class="projects__button">Rostov-on-Don Patriotic</div>
+								</div>
+							</div>
+							<div>
+								<div class="projects__info">
+									<div class="projects__title">
+										Completed<br />
+										projects
+									</div>
+									<div class="projects__text">
+										Only a small part of the work performed by our company is
+										presented on the site. For 14 years on in the construction
+										market we have made happy more than 1000 families
+									</div>
+									<div class="projects-details">
+										<div class="projects-details__sample">
+											<div>
+												<div class="projects-details__title">city:</div>
+												<div class="projects-details__text">
+													Rostov-on-Don <br />LCD admiral
+												</div>
+											</div>
+											<div>
+												<div class="projects-details__title">
+													apartment area:
+												</div>
+												<div class="projects-details__text">81 m2</div>
+											</div>
+											<div>
+												<div class="projects-details__title">Repair time:</div>
+												<div class="projects-details__text">3.5 months</div>
+											</div>
+											<div>
+												<div class="projects-details__title">Repair Cost:</div>
+												<div class="projects-details__text">Upon request</div>
+											</div>
+										</div>
+										<div class="projects__big-slider-buttons color-white">
+											<img src="/assets/icons/big_slider/prev.svg" />
+											<div
+												class="projects__big-slider-dot projects__big-slider-dot-active"
+											></div>
+											<div class="projects__big-slider-dot"></div>
+											<div class="projects__big-slider-dot"></div>
+											<img src="/assets/icons/big_slider/next.svg" />
+										</div>
+									</div>
+								</div>
+								<div class="projects__gallery bg-white"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<section></section>
+	</footer>
+</body>
