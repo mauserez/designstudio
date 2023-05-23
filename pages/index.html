@@ -42,6 +42,20 @@
 		text-transform: uppercase;
 	}
 
+	.section-title-center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 20px;
+		line-height: 28px;
+		gap: 13px;
+	}
+
+	.section-title-center__icon-group {
+		gap: 8px;
+		display: flex;
+	}
+
 	button {
 		color: var(--color-white);
 		background: var(--bg-gold);
@@ -52,6 +66,8 @@
 		border: none;
 		cursor: pointer;
 		transition: background-color 0.3s, transform 0.4s;
+		font-size: 11px;
+		line-height: 15px;
 	}
 
 	button:hover {
@@ -68,6 +84,10 @@
 
 	.gold-color {
 		color: var(--color-gold);
+	}
+
+	.position-relative {
+		position: relative;
 	}
 
 	.content-button {
@@ -127,9 +147,10 @@
 	.hero {
 		width: 1204px;
 		align-content: center;
-		padding-top: 194px;
+		padding-top: 190px;
 		padding-bottom: 208px;
 		color: var(--color-white);
+		padding-left: 50px;
 	}
 
 	.hero__title {
@@ -143,11 +164,12 @@
 		font-size: 22px;
 		line-height: 36px;
 		color: var(--color-white);
-		margin-bottom: 32px;
+		margin-bottom: 24px;
+		letter-spacing: -0.6px;
 	}
 
 	.hero > * {
-		max-width: 520px;
+		max-width: 540px;
 	}
 
 	.hero__buttons {
@@ -161,6 +183,7 @@
 			width: 100%;
 			padding-top: 85px;
 			padding-bottom: 61px;
+			padding-left: 0;
 		}
 
 		.hero__title {
@@ -181,8 +204,19 @@
 	.projects {
 		background: var(--bg-black);
 		width: 1171px;
-		padding-top: 107px;
+		padding-top: 100px;
 		padding-bottom: 257px;
+	}
+
+	@media screen and (max-width: 1299px) {
+		.projects {
+			width: 100%;
+		}
+
+		.projects__video {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	.projects__info-gallery > * {
@@ -223,7 +257,7 @@
 	}
 
 	.projects__info-gallery {
-		margin-bottom: 90px;
+		margin-bottom: 92px;
 	}
 
 	.projects__title {
@@ -233,20 +267,21 @@
 		letter-spacing: -0.07em;
 		text-transform: uppercase;
 		color: var(--color-gold);
-		margin-bottom: 34px;
+		margin-bottom: 24px;
 	}
 
 	.projects__text {
 		font-size: 14px;
 		line-height: 27px;
 		color: var(--color-white);
-		margin-bottom: 42px;
+		margin-bottom: 48px;
 	}
 
 	.projects-details__sample {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 34px;
+		grid-template-columns: 170px 1fr;
+		column-gap: 28px;
+		row-gap: 46px;
 	}
 
 	.projects-details__title {
@@ -284,6 +319,106 @@
 	.projects__big-slider-dot-active {
 		background-color: #fff;
 	}
+
+	.projects__gallery {
+	}
+
+	.projects__gallery-photo {
+		width: 100%;
+		height: 100%;
+	}
+
+	.projects__video {
+		width: 816px;
+		height: 434px;
+		margin: 0 auto;
+		margin-top: 30px;
+		background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.7) 0%,
+				rgba(0, 0, 0, 0.7) 100%
+			),
+			url(/assets/img/video.png);
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		transform: translateX(-50%);
+		left: 50%;
+	}
+
+	.projects__video-button {
+		background-color: var(--bg-gold);
+		color: #fff;
+		box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+		border-radius: 50%;
+		width: 85px;
+		height: 85px;
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	.projects__feedback {
+		margin: 0 auto;
+		margin-top: 270px;
+		width: 768px;
+		text-align: center;
+		margin-bottom: 150px;
+	}
+
+	.projects__feedback-delimiter {
+		margin-bottom: 24px;
+	}
+
+	.projects__feedback-text {
+		font-size: 18px;
+		line-height: 37px;
+		text-align: center;
+		width: 690px;
+		margin: 0 auto;
+		margin-bottom: 82px;
+	}
+
+	.projects__form {
+		background-color: #fff;
+		display: grid;
+		grid-template-columns: 231px 231px 200px;
+		grid-auto-rows: 51px;
+		row-gap: 60px;
+		column-gap: 54px;
+	}
+
+	.projects__form-element {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.projects__form-element label {
+		color: var(--color-gray-50);
+		font-size: 13px;
+		line-height: 21px;
+	}
+
+	.projects__form button {
+		font-size: 13px;
+		line-height: 27px;
+	}
+
+	.projects__form input {
+		border: none;
+		border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+		padding-bottom: 8px;
+		width: 100%;
+	}
+
+	.projects__form input::placeholder {
+		color: #363636;
+		font-size: 14px;
+		line-height: 23px;
+	}
 </style>
 <body>
 	<header class="sm-full-width">
@@ -315,8 +450,8 @@
 					</div>
 					<div class="hero__text">
 						Get ready-made turnkey repairs on time<br />
-						with work time saving up to 45 days and<br />
-						20% from cost of materials due to the organization of work
+						with work time saving up to 45 days and 20% from<br />
+						cost of materials due to the organization of work
 					</div>
 					<div class="hero__buttons">
 						<button class="content-button italic">calculate the cost</button>
@@ -388,11 +523,64 @@
 										</div>
 									</div>
 								</div>
-								<div class="projects__gallery bg-white"></div>
+								<div class="projects__gallery">
+									<div
+										class="projects__gallery-photo bg-image"
+										style="background-image: url(/assets/img/proj/admiral.png)"
+									></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="position-relative">
+							<div class="section-title section-title-center color-white">
+								<span>Online control</span>
+								<div class="section-title-center__icon-group">
+									<img alt="Линия" src="/assets/icons/title_icons/line.svg" />
+									<img
+										alt="Камера"
+										src="/assets/icons/title_icons/camera.svg"
+									/>
+									<img alt="Линия" src="/assets/icons/title_icons/line.svg" />
+								</div>
+							</div>
+							<div class="projects__video bg-image">
+								<div class="projects__video-button">
+									<img
+										alt="Воспроизвести видео"
+										src="/assets/icons/video/play.svg"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="projects__feedback">
+			<img
+				class="projects__feedback-delimiter"
+				alt="Длинная линия"
+				src="/assets/icons/title_icons/longline.svg"
+			/>
+			<div class="projects__feedback-text">
+				At each facility, a camera is installed that broadcasts the progress of
+				work on the clock. At any time, you can go to our website and monitor
+				the progress of work in your apartment. You can watch the live broadcast
+				from one of our facilities!
+				<br />Leave a request below and you will receive a link to the
+				broadcast.
+			</div>
+			<div class="projects__form">
+				<div class="projects__form-element">
+					<label for="name">Name</label>
+					<input name="name" placeholder="What is your name" />
+				</div>
+				<div class="projects__form-element">
+					<label for="phone">Phone</label>
+					<input name="phone" placeholder="Your phone number" />
+				</div>
+				<button>submit</button>
 			</div>
 		</section>
 	</main>
