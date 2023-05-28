@@ -11,8 +11,76 @@
 	--bg-white: #fff;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: NuniSans, Helvetica, Arial, Helvetica, sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+
+.bg-image {
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.bg-white {
+	background-color: var(--bg-white);
+}
+
+.bg-black {
+	background-color: var(--bg-black);
+}
+
+.section-title-center__icon-group {
+	gap: 8px;
+	display: flex;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.color-white {
+	color: var(--color-white);
+}
+
+.color-black {
+	color: var(--color-black);
+}
+
+.gold-color {
+	color: var(--color-gold);
+}
+
+.position-relative {
+	position: relative;
+}
+
+.content-button {
+	padding: 19px 41px;
+}
+
+.transparent-button {
+	background: transparent;
+	box-shadow: none;
+	border: 1px solid var(--color-white);
+}
+
+.transparent-button:hover {
+	background-color: var(--bg-gold);
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .section-content {

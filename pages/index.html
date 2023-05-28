@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Design Studio</title>
 		<link rel="stylesheet" href="../assets/css/font.css" />
+		<title>Design Studio</title>
 		<link
 			type="image/x-icon"
 			href="/assets/icons/header/logo.svg"
@@ -20,87 +20,28 @@
 		<link rel="stylesheet" href="../assets/css/steps.css" />
 		<link rel="stylesheet" href="../assets/css/design.css" />
 		<link rel="stylesheet" href="../assets/css/clients.css" />
+		<link rel="stylesheet" href="../assets/css/questions.css" />
+		<link rel="stylesheet" href="../assets/css/contacts.css" />
 	</head>
 </head>
-
-<style>
-	* {
-		box-sizing: border-box;
-	}
-
-	.bg-image {
-		background-size: cover;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-	}
-
-	.bg-white {
-		background-color: var(--bg-white);
-	}
-
-	.bg-black {
-		background-color: var(--bg-black);
-	}
-
-	.section-title-center__icon-group {
-		gap: 8px;
-		display: flex;
-	}
-
-	.italic {
-		font-style: italic;
-	}
-
-	.color-white {
-		color: var(--color-white);
-	}
-
-	.color-black {
-		color: var(--color-black);
-	}
-
-	.gold-color {
-		color: var(--color-gold);
-	}
-
-	.position-relative {
-		position: relative;
-	}
-
-	.content-button {
-		padding: 19px 41px;
-	}
-
-	.transparent-button {
-		background: transparent;
-		box-shadow: none;
-		border: 1px solid var(--color-white);
-	}
-
-	.transparent-button:hover {
-		background-color: var(--bg-gold);
-	}
-
-	.flex-1 {
-		flex: 1;
-	}
-
-	.text-center {
-		text-align: center;
-	}
-</style>
 <body>
-	<header class="sm-full-width">
+	<header class="sm-full-width" id="header">
 		<section class="header-section">
 			<section class="header__wrap">
-				<div class="header__logo">IC "Repair Design Project"</div>
+				<div class="header__logo">
+					<a href="#header">IC "Repair Design Project"</a>
+				</div>
 				<ul class="header__nav">
 					<li class="header__nav-item">home</li>
-					<li class="header__nav-item">projects</li>
-					<li class="header__nav-item">measurement</li>
+					<li class="header__nav-item">
+						<a href="#projects">projects</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#measurement">measurement</a>
+					</li>
 					<li class="header__nav-item">team</li>
 					<li class="header__nav-item">reviews</li>
-					<li class="header__nav-item">contacts</li>
+					<li class="header__nav-item"><a href="#contacts">contacts</a></li>
 				</ul>
 				<div class="header__contact">
 					<a href="tel:+79287683239">+7 (928) 768-32-39</a>
@@ -132,7 +73,7 @@
 			</div>
 		</section>
 
-		<section class="bg-black">
+		<section id="projects" class="bg-black">
 			<div class="section-content projects">
 				<div class="section-content__body">
 					<div class="projects__body">
@@ -252,7 +193,7 @@
 				the progress of work in your apartment. You can watch the live broadcast
 				from one of our facilities!
 				<br />Leave a request below and you will receive a link to the
-				<!--broadcast.-->
+				broadcast.
 			</div>
 			<form class="projects__form">
 				<div class="projects__form-input-group">
@@ -362,7 +303,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="steps">
+		<section id="measurement" class="steps">
 			<div class="section-content">
 				<div class="section-content__body">
 					<div class="steps__content">
@@ -613,107 +554,6 @@
 				</div>
 			</div>
 		</section>
-		<style>
-			.questions {
-				margin: 0 auto;
-				padding-bottom: 66px;
-				background: linear-gradient(
-						180deg,
-						rgba(0, 0, 0, 0.8) 0%,
-						rgba(0, 0, 0, 0.85) 100%
-					),
-					url(/assets/img/contactsbg.png);
-				background-size: cover;
-				background-repeat: no-repeat;
-			}
-
-			.questions__form {
-				width: 880px;
-				position: absolute;
-				transform: translateX(-50%);
-				left: 50%;
-				top: -225px;
-				padding: 34px 181px;
-				font-size: 14px;
-			}
-
-			.questions__form-title {
-				font-family: YesevaOne;
-				font-size: 20px;
-				line-height: 28px;
-				text-align: center;
-				text-transform: uppercase;
-				color: var(--color-white);
-				margin-bottom: 40px;
-			}
-
-			.questions__form-elements {
-				display: flex;
-				flex-direction: column;
-				gap: 48px;
-			}
-
-			.questions__form input {
-				caret-color: var(--color-white);
-				color: #fff;
-			}
-
-			.questions__form label {
-				color: rgba(255, 255, 255, 0.5);
-			}
-
-			.questions__form input::placeholder {
-				color: var(--color-white);
-			}
-
-			.questions__form button {
-				flex-grow: 0;
-				display: flex;
-				align-self: center;
-				justify-content: center;
-				align-items: center;
-			}
-
-			@media screen and (max-width: 1299px) {
-				.questions {
-					padding-top: 170px;
-					background-color: var(--bg-black);
-					background-image: none;
-				}
-
-				.questions__form {
-					position: relative;
-					top: 0;
-					left: 0;
-					transform: translate(0, 0);
-					padding: 0;
-					width: 100%;
-				}
-
-				.questions__form-elements {
-					gap: 60px;
-				}
-
-				.questions__form-title {
-					margin-bottom: 55px;
-				}
-
-				.form-element-group {
-					flex-direction: column;
-					gap: 60px;
-				}
-
-				.questions__form-agree {
-					text-align: left;
-				}
-
-				.questions__form button {
-					margin-top: -30px;
-					width: 100%;
-					max-width: 340px;
-				}
-			}
-		</style>
 		<section class="questions position-relative bg-black">
 			<form autocomplete="off" class="questions__form bg-black">
 				<div class="questions__form-title">Have any questions ?</div>
@@ -753,80 +593,18 @@
 					<button class="form-button">Submit</button>
 				</div>
 			</form>
-			<style>
-				.contacts {
-					padding-top: 270px;
-				}
-
-				.contacts__wrap {
-					display: flex;
-					flex-direction: column;
-				}
-
-				.contacts__title {
-					color: var(--color-gold);
-					font-size: 20px;
-					line-height: 28px;
-					text-align: center;
-					text-transform: uppercase;
-				}
-
-				.contacts__icons {
-					display: flex;
-					gap: 15px;
-					justify-content: center;
-					margin-top: 26px;
-				}
-
-				.contacts__map {
-					width: 925px;
-					height: 465px;
-					background-image: url(/assets/img/map.png);
-					margin: 0 auto;
-					margin-top: 40px;
-				}
-
-				@media screen and (max-width: 1299px) {
-					.contacts {
-						padding-top: 0;
-					}
-
-					.contacts__icons,
-					.contacts__title {
-						order: 1;
-					}
-
-					.contacts__map {
-						width: 100%;
-						margin-top: 48px;
-						height: 256px;
-						margin-bottom: 40px;
-					}
-
-					.contacts__title {
-						font-size: 18px;
-						line-height: 138.6%;
-					}
-
-					.contacts__icons {
-						gap: 20px;
-					}
-					.contacts__icons > * {
-						width: 40px;
-					}
-
-					.contacts__telephone {
-						display: block;
-					}
-				}
-			</style>
-			<section class="contacts">
+			<section id="contacts" class="contacts">
 				<div class="section-content">
 					<div class="section-content__body">
 						<div class="contacts__wrap">
 							<div class="contacts__title text-center">
-								Rostov-on-Don, Nansen St., 239 Shopping Center Decorum
-								<span class="contacts__telephone">Tel +7 (928) 768 32 29</span>
+								Rostov-on-Don, Nansen St., 239 Shopping Center
+								<span class="contacts__shop">
+									Decorum
+									<span class="contacts__telephone">
+										Tel +7 (928) 768 32 29
+									</span>
+								</span>
 							</div>
 							<div class="contacts__icons">
 								<img alt="email" src="/assets/icons/mail.svg" />
@@ -843,14 +621,20 @@
 	<footer class="sm-full-width">
 		<section class="footer-section">
 			<section class="footer__wrap">
-				<div class="footer__logo">IC "Repair Design Project"</div>
+				<div class="footer__logo">
+					<a href="#header">IC "Repair Design Project"</a>
+				</div>
 				<ul class="footer__nav">
 					<li class="footer__nav-item">home</li>
-					<li class="footer__nav-item">projects</li>
-					<li class="footer__nav-item">measurement</li>
+					<li class="footer__nav-item">
+						<a href="#projects">projects</a>
+					</li>
+					<li class="footer__nav-item">
+						<a href="#measurement">measurement</a>
+					</li>
 					<li class="footer__nav-item">team</li>
 					<li class="footer__nav-item">reviews</li>
-					<li class="footer__nav-item">contacts</li>
+					<li class="footer__nav-item"><a href="#contacts">contacts</a></li>
 				</ul>
 				<div class="footer__contact">
 					<a href="tel:+79287683239">+7 (928) 768-32-39</a>
@@ -859,4 +643,43 @@
 			</section>
 		</section>
 	</footer>
+	<style>
+		.scroll-top {
+			position: fixed;
+			right: 30px;
+			bottom: 40px;
+			width: 45px;
+			height: 45px;
+			background-color: var(--bg-gold);
+			color: var(--color-gold);
+			font-size: 35px;
+			font-family: Helvetica, Arial;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			font-weight: bold;
+			transition: opacity 0.3s;
+			z-index: 1;
+		}
+
+		.scroll-top a {
+			text-decoration: none;
+			color: var(--color-white);
+			margin-top: -10px;
+			display: block;
+		}
+	</style>
+	<div id="scroll-top" class="scroll-top">
+		<a href="#header">&#8593;</a>
+	</div>
 </body>
+
+<script>
+	let scroller = document.getElementById("scroll-top");
+
+	window.addEventListener("scroll", (e) => {
+		console.log(window.scrollY);
+		scroller.style.opacity = window.scrollY > 500 ? "100" : "0";
+	});
+</script>

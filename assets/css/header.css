@@ -27,11 +27,28 @@
 	color: var(--color-gold);
 }
 
+.header__logo a,
+.footer__logo a {
+	color: var(--color-gold);
+	text-decoration: none;
+}
+
 .header__nav,
 .footer__nav {
 	display: flex;
 	justify-content: space-between;
 	flex: 1;
+}
+
+.header__nav a,
+.footer__nav a {
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+.header__nav a:hover,
+.footer__nav a:hover {
+	color: var(--color-gold);
 }
 
 .header__nav-item,

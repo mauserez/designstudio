@@ -195,10 +195,6 @@
 		padding-bottom: 0;
 	}
 
-	.projects__body {
-		align-items: center;
-	}
-
 	.projects__title {
 		font-size: 22px;
 		line-height: 138.6%;
@@ -210,6 +206,7 @@
 		font-size: 11px;
 		line-height: 158.48%;
 		text-align: center;
+		max-width: 600px;
 	}
 
 	.projects__small-gallery {
@@ -230,6 +227,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 	}
 
 	.projects__info-gallery {
@@ -292,10 +290,13 @@
 		width: 100%;
 		font-size: 11px;
 		line-height: 169.8%;
+		max-width: 460px;
 	}
 
 	.projects__form {
 		background-color: var(--bg-black);
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	.projects__form-input-group {
@@ -306,6 +307,15 @@
 		position: relative;
 	}
 
+	.projects__form-input-group label {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.projects__form-input-group input::placeholder,
+	.projects__form-input-group input {
+		color: var(--color-white);
+	}
+
 	.projects__form-input-group button {
 		order: 1;
 		position: absolute;
@@ -313,6 +323,8 @@
 		bottom: -24px;
 		width: 100%;
 		max-width: 340px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.projects__checkbox-wrap {
