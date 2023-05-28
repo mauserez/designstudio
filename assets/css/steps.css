@@ -1,0 +1,130 @@
+.steps {
+	min-height: 645px;
+	margin-bottom: 240px;
+	background-image: url(/assets/img/steps_construction.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.steps__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.steps__points {
+	padding-left: 140px;
+	padding-top: 130px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 88px;
+	padding-right: 80px;
+}
+
+.steps__point {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+}
+
+.steps__point-icon {
+	background-color: var(--bg-gold);
+	border: 8px solid var(--bg-white);
+	box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+	border-radius: 50%;
+	font-family: "YesevaOne";
+	font-size: 18px;
+	line-height: 25px;
+	min-width: 56px;
+	min-height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.steps__point-text {
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--color-gray);
+}
+
+.steps__form-wrap {
+	padding-left: 110px;
+	padding-top: 126px;
+	display: flex;
+	flex-direction: column;
+	gap: 38px;
+}
+
+.steps__form {
+	padding: 28px 49px;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+
+.steps__form-title {
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+	color: var(--color-white);
+	margin-bottom: 40px;
+}
+
+.steps__form label {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.steps__form input {
+	caret-color: var(--color-white);
+	color: #fff;
+}
+
+.steps__form input::placeholder {
+	color: var(--color-white);
+}
+
+.steps__form .form-element:not(:nth-of-type(2)) {
+	margin-top: 48px;
+}
+
+.steps__form-checkbox {
+	margin-top: 8px;
+}
+
+.steps-button {
+	margin-top: 40px;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.steps__cheap {
+	display: flex;
+	gap: 25px;
+	padding-left: 32px;
+	align-items: center;
+}
+
+.steps__cheap-icon {
+	width: 72px;
+	height: 72px;
+	background: var(--color-gold);
+	box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.steps__cheap-text {
+	color: var(--color-gold);
+	font-size: 18px;
+	line-height: 26px;
+	color: #e3b873;
+	text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+}
+
+@media screen and (max-width: 1299px) {
+	.steps {
+		display: none;
+	}
+}

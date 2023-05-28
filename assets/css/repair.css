@@ -1,0 +1,101 @@
+.repair-types {
+	padding-bottom: 300px;
+}
+
+.repair-types__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(340px, 392px));
+	column-gap: 30px;
+	row-gap: 60px;
+	justify-content: center;
+}
+
+.repair-types__card {
+	display: grid;
+	position: relative;
+}
+
+.repair-types__image {
+	height: 421px;
+	position: relative;
+}
+
+.repair-types__description {
+	z-index: 1;
+	position: relative;
+	background-color: var(--bg-white);
+	width: 330px;
+	justify-self: center;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+	padding: 25px 34px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	position: absolute;
+	bottom: -40%;
+}
+
+.repair-types__description-title {
+	font-family: "YesevaOne";
+	font-size: 18px;
+	line-height: 25px;
+	color: var(--color-gray);
+}
+
+.repair-types__description-list {
+	font-size: 13px;
+	line-height: 27px;
+	color: var(--color-lightgray);
+	margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1299px) {
+	.repair-types {
+		padding-bottom: 370px;
+	}
+
+	.repair-types__cards {
+		row-gap: 200px;
+	}
+
+	.repair-types__description {
+		justify-self: start;
+	}
+
+	.repair-types__description-list {
+		margin-bottom: 16px;
+	}
+
+	.repair-types__description-button {
+		padding: 11px 15px;
+		font-size: 15px;
+		line-height: 138.6%;
+		bottom: -20px;
+	}
+
+	.repair-types__image {
+		height: 360px;
+		position: relative;
+	}
+
+	.repair-types__description-title {
+		font-size: 15px;
+		line-height: 138.6%;
+	}
+
+	.repair-types__description {
+		width: 270px;
+		bottom: -100px;
+	}
+
+	.repair-types__description-list {
+		line-height: 169%;
+		white-space: nowrap;
+	}
+
+	.repair-types__description .card-button {
+		min-width: 190px;
+		max-width: 190px;
+		bottom: -15px;
+	}
+}

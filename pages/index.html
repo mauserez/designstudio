@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<title>Design Studio</title>
+		<link rel="stylesheet" href="../assets/css/font.css" />
 		<link
 			type="image/x-icon"
 			href="/assets/icons/header/logo.svg"
@@ -11,13 +12,22 @@
 		/>
 		<link type="Image/x-icon" href="/assets/icons/header/logo.svg" rel="icon" />
 		<link rel="stylesheet" href="../assets/css/reset.css" />
-		<link rel="stylesheet" href="../assets/css/font.css" />
 		<link rel="stylesheet" href="../assets/css/header.css" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/hero.css" />
+		<link rel="stylesheet" href="../assets/css/projects.css" />
+		<link rel="stylesheet" href="../assets/css/repair.css" />
+		<link rel="stylesheet" href="../assets/css/steps.css" />
+		<link rel="stylesheet" href="../assets/css/design.css" />
+		<link rel="stylesheet" href="../assets/css/clients.css" />
 	</head>
 </head>
 
 <style>
+	* {
+		box-sizing: border-box;
+	}
+
 	.bg-image {
 		background-size: cover;
 		background-position: 50% 50%;
@@ -32,46 +42,9 @@
 		background-color: var(--bg-black);
 	}
 
-	.section-content {
-		width: 1236px;
-		margin: 0 auto;
-	}
-
-	.section-title {
-		font-family: "YesevaOne";
-		text-transform: uppercase;
-	}
-
-	.section-title-center {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 20px;
-		line-height: 28px;
-		gap: 13px;
-	}
-
 	.section-title-center__icon-group {
 		gap: 8px;
 		display: flex;
-	}
-
-	button {
-		color: var(--color-white);
-		background: var(--bg-gold);
-		box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-		border-radius: 2px;
-		text-align: center;
-		text-transform: uppercase;
-		border: none;
-		cursor: pointer;
-		transition: background-color 0.3s, transform 0.4s;
-		font-size: 11px;
-		line-height: 15px;
-	}
-
-	button:hover {
-		transform: scale3d(1.025, 1.025, 1);
 	}
 
 	.italic {
@@ -80,6 +53,10 @@
 
 	.color-white {
 		color: var(--color-white);
+	}
+
+	.color-black {
+		color: var(--color-black);
 	}
 
 	.gold-color {
@@ -104,320 +81,12 @@
 		background-color: var(--bg-gold);
 	}
 
-	@media screen and (max-width: 1299px) {
-		.section-content {
-			width: 100%;
-		}
-
-		.section-content__body {
-			margin: 0 auto;
-		}
-
-		header,
-		main,
-		footer {
-			width: 100%;
-		}
-
-		.header-nav {
-			width: 100%;
-		}
-
-		.sm-full-width {
-			width: 100vw;
-		}
-
-		main > * {
-			padding-left: 18px;
-			padding-right: 18px;
-		}
+	.flex-1 {
+		flex: 1;
 	}
 
-	.hero-wrap {
-		background: linear-gradient(
-				0deg,
-				rgba(0, 0, 0, 0.7) 0%,
-				rgba(0, 0, 0, 0.7) 100%
-			),
-			url(/assets/img/hero.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.hero {
-		width: 1204px;
-		align-content: center;
-		padding-top: 190px;
-		padding-bottom: 208px;
-		color: var(--color-white);
-		padding-left: 50px;
-	}
-
-	.hero__title {
-		font-size: 40px;
-		line-height: 53px;
-		margin-bottom: 16px;
-	}
-
-	.hero__text {
-		font-family: "NuniSans";
-		font-size: 22px;
-		line-height: 36px;
-		color: var(--color-white);
-		margin-bottom: 24px;
-		letter-spacing: -0.6px;
-	}
-
-	.hero > * {
-		max-width: 540px;
-	}
-
-	.hero__buttons {
-		display: flex;
-		row-gap: 24px;
-		column-gap: 20px;
-	}
-
-	@media screen and (max-width: 1299px) {
-		.hero {
-			width: 100%;
-			padding-top: 85px;
-			padding-bottom: 61px;
-			padding-left: 0;
-		}
-
-		.hero__title {
-			font-size: 23px;
-			line-height: 132.83%;
-		}
-
-		.hero__text {
-			font-size: 14px;
-			line-height: 135.84%;
-		}
-
-		.hero__buttons {
-			flex-direction: column;
-		}
-	}
-
-	.projects {
-		background: var(--bg-black);
-		width: 1171px;
-		padding-top: 100px;
-		padding-bottom: 257px;
-	}
-
-	@media screen and (max-width: 1299px) {
-		.projects {
-			width: 100%;
-		}
-
-		.projects__video {
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	.projects__info-gallery > * {
-		display: grid;
-		grid-template-columns: 442px 1fr;
-		gap: 50px;
-	}
-
-	.projects__buttons {
-		display: flex;
-		font-family: "YesevaOne";
-		font-size: 14px;
-		line-height: 19px;
-		text-transform: uppercase;
-		column-gap: 60px;
-		margin-bottom: 45px;
-	}
-
-	.projects__button {
-		color: rgba(255, 255, 255, 0.3);
-		padding-bottom: 6px;
-		cursor: pointer;
-		transition: color 0.3s;
-	}
-
-	.projects__button:hover {
-		color: var(--color-gold);
-	}
-
-	.projects__button-active {
-		color: var(--color-gold);
-		border-bottom: 1px solid var(--color-gold);
-	}
-
-	.projects__body {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.projects__info-gallery {
-		margin-bottom: 92px;
-	}
-
-	.projects__title {
-		font-family: YesevaOne;
-		font-size: 27px;
-		line-height: 37px;
-		letter-spacing: -0.07em;
-		text-transform: uppercase;
-		color: var(--color-gold);
-		margin-bottom: 24px;
-	}
-
-	.projects__text {
-		font-size: 14px;
-		line-height: 27px;
-		color: var(--color-white);
-		margin-bottom: 48px;
-	}
-
-	.projects-details__sample {
-		display: grid;
-		grid-template-columns: 170px 1fr;
-		column-gap: 28px;
-		row-gap: 46px;
-	}
-
-	.projects-details__title {
-		font-family: "YesevaOne";
-		font-size: 18px;
-		line-height: 25px;
-		text-transform: uppercase;
-		color: var(--color-gold);
-	}
-
-	.projects-details__text {
-		font-size: 13px;
-		line-height: 21px;
-		color: var(--color-white);
-	}
-
-	.projects__big-slider-buttons {
-		margin-top: 80px;
-		display: flex;
-		column-gap: 20px;
-		align-items: center;
-	}
-
-	.projects__big-slider-buttons > * {
-		cursor: pointer;
-	}
-
-	.projects__big-slider-dot {
-		background: rgba(255, 255, 255, 0.3);
-		border-radius: 30px;
-		width: 9.5px;
-		height: 9.5px;
-	}
-
-	.projects__big-slider-dot-active {
-		background-color: #fff;
-	}
-
-	.projects__gallery {
-	}
-
-	.projects__gallery-photo {
-		width: 100%;
-		height: 100%;
-	}
-
-	.projects__video {
-		width: 816px;
-		height: 434px;
-		margin: 0 auto;
-		margin-top: 30px;
-		background: linear-gradient(
-				0deg,
-				rgba(0, 0, 0, 0.7) 0%,
-				rgba(0, 0, 0, 0.7) 100%
-			),
-			url(/assets/img/video.png);
-		display: flex;
-		justify-content: center;
-		position: absolute;
-		transform: translateX(-50%);
-		left: 50%;
-	}
-
-	.projects__video-button {
-		background-color: var(--bg-gold);
-		color: #fff;
-		box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
-		border-radius: 50%;
-		width: 85px;
-		height: 85px;
-		display: flex;
-		align-self: center;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-	}
-
-	.projects__feedback {
-		margin: 0 auto;
-		margin-top: 270px;
-		width: 768px;
+	.text-center {
 		text-align: center;
-		margin-bottom: 150px;
-	}
-
-	.projects__feedback-delimiter {
-		margin-bottom: 24px;
-	}
-
-	.projects__feedback-text {
-		font-size: 18px;
-		line-height: 37px;
-		text-align: center;
-		width: 690px;
-		margin: 0 auto;
-		margin-bottom: 82px;
-	}
-
-	.projects__form {
-		background-color: #fff;
-		display: grid;
-		grid-template-columns: 231px 231px 200px;
-		grid-auto-rows: 51px;
-		row-gap: 60px;
-		column-gap: 54px;
-	}
-
-	.projects__form-element {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.projects__form-element label {
-		color: var(--color-gray-50);
-		font-size: 13px;
-		line-height: 21px;
-	}
-
-	.projects__form button {
-		font-size: 13px;
-		line-height: 27px;
-	}
-
-	.projects__form input {
-		border: none;
-		border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-		padding-bottom: 8px;
-		width: 100%;
-	}
-
-	.projects__form input::placeholder {
-		color: #363636;
-		font-size: 14px;
-		line-height: 23px;
 	}
 </style>
 <body>
@@ -451,7 +120,7 @@
 					<div class="hero__text">
 						Get ready-made turnkey repairs on time<br />
 						with work time saving up to 45 days and 20% from<br />
-						cost of materials due to the organization of work
+						cost of materials due to the organization of <br />work
 					</div>
 					<div class="hero__buttons">
 						<button class="content-button italic">calculate the cost</button>
@@ -468,7 +137,7 @@
 				<div class="section-content__body">
 					<div class="projects__body">
 						<div class="projects__info-gallery">
-							<div>
+							<div class="projects__gallery-buttons-wrap">
 								<div class="projects__buttons-push">&nbsp;</div>
 								<div class="projects__buttons">
 									<div class="projects__button projects__button-active">
@@ -488,6 +157,18 @@
 										Only a small part of the work performed by our company is
 										presented on the site. For 14 years on in the construction
 										market we have made happy more than 1000 families
+									</div>
+									<div class="projects__small-gallery bg-image">
+										<img
+											class="slider-icon prev"
+											alt="Предыдущая картинка"
+											src="/assets/icons/small_slider/prev.svg"
+										/>
+										<img
+											class="slider-icon next"
+											alt="Следующая картинка"
+											src="/assets/icons/small_slider/next.svg"
+										/>
 									</div>
 									<div class="projects-details">
 										<div class="projects-details__sample">
@@ -526,13 +207,15 @@
 								<div class="projects__gallery">
 									<div
 										class="projects__gallery-photo bg-image"
-										style="background-image: url(/assets/img/proj/admiral.png)"
+										style="
+											background-image: url(/assets/img/projects/admiral.png);
+										"
 									></div>
 								</div>
 							</div>
 						</div>
 
-						<div class="position-relative">
+						<div class="position-relative projects__video-wrap">
 							<div class="section-title section-title-center color-white">
 								<span>Online control</span>
 								<div class="section-title-center__icon-group">
@@ -569,22 +252,611 @@
 				the progress of work in your apartment. You can watch the live broadcast
 				from one of our facilities!
 				<br />Leave a request below and you will receive a link to the
-				broadcast.
+				<!--broadcast.-->
 			</div>
-			<div class="projects__form">
-				<div class="projects__form-element">
-					<label for="name">Name</label>
-					<input name="name" placeholder="What is your name" />
+			<form class="projects__form">
+				<div class="projects__form-input-group">
+					<div class="form-element">
+						<label for="name">Name</label>
+						<input
+							autocomplete="off"
+							type="text"
+							name="name"
+							placeholder="What is your name"
+						/>
+					</div>
+					<div class="form-element">
+						<label for="phone">Phone</label>
+						<input
+							autocomplete="off"
+							type="phone"
+							name="phone"
+							placeholder="Your phone number"
+						/>
+					</div>
+					<button class="form-button">submit</button>
+
+					<div class="projects__checkbox-wrap">
+						<div>
+							<input type="checkbox" />
+							<span>I agree to the processing of personal data</span>
+						</div>
+					</div>
 				</div>
-				<div class="projects__form-element">
-					<label for="phone">Phone</label>
-					<input name="phone" placeholder="Your phone number" />
+			</form>
+		</section>
+		<section class="repair-types">
+			<div class="section-content">
+				<div class="section-content__body">
+					<div class="section-title section-title-center color-white">
+						<span class="color-black">Types of repair</span>
+						<div class="section-title-center__icon-group">
+							<img alt="Линия" src="/assets/icons/title_icons/line.svg" />
+							<img alt="Камера" src="/assets/icons/title_icons/hammer.svg" />
+							<img alt="Линия" src="/assets/icons/title_icons/line.svg" />
+						</div>
+					</div>
+					<div class="repair-types__cards">
+						<div class="repair-types__card">
+							<div
+								class="repair-types__image bg-image"
+								style="
+									background-image: url(/assets/img/repairs/redecorating.png);
+								"
+							></div>
+							<div class="repair-types__description">
+								<div class="repair-types__description-title">Redecorating</div>
+								<ul class="repair-types__description-list">
+									<li>• Dismantling of old coatings</li>
+									<li>• Wallpapering</li>
+									<li>• Painting walls and ceilings</li>
+									<li>• Laying flooring</li>
+									<li>• Replacing plumbing</li>
+									<li>• Replacing sockets and switches</li>
+									<li>• Replacing doors</li>
+								</ul>
+								<div class="card-button">from 900 rub / m2</div>
+							</div>
+						</div>
+						<div class="repair-types__card">
+							<div
+								class="repair-types__image bg-image"
+								style="background-image: url(/assets/img/repairs/overhaul.png)"
+							></div>
+							<div class="repair-types__description">
+								<div class="repair-types__description-title">Overhaul</div>
+								<ul class="repair-types__description-list">
+									<li>• Dismantling of old coatings</li>
+									<li>• Wallpapering</li>
+									<li>• Painting walls and ceilings</li>
+									<li>• Laying flooring</li>
+									<li>• Replacing plumbing</li>
+									<li>• Replacing sockets and switches</li>
+									<li>• Replacing doors</li>
+								</ul>
+								<button class="card-button">from 1800 rub / m2</button>
+							</div>
+						</div>
+						<div class="repair-types__card">
+							<div
+								class="repair-types__image bg-image"
+								style="background-image: url(/assets/img/repairs/designer.png)"
+							></div>
+							<div class="repair-types__description">
+								<div class="repair-types__description-title">
+									Designer Repair
+								</div>
+								<ul class="repair-types__description-list">
+									<li>• Dismantling of old coatings</li>
+									<li>• Wallpapering</li>
+									<li>• Painting walls and ceilings</li>
+									<li>• Laying flooring</li>
+									<li>• Replacing plumbing</li>
+									<li>• Replacing sockets and switches</li>
+									<li>• Replacing doors</li>
+								</ul>
+								<button class="card-button">from 4000 rub / m2</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<button>submit</button>
 			</div>
 		</section>
+		<section class="steps">
+			<div class="section-content">
+				<div class="section-content__body">
+					<div class="steps__content">
+						<div class="steps__points">
+							<div class="steps__point color-white">
+								<div class="steps__point-icon">01</div>
+								<div class="steps__point-text">
+									Our specialist will arrive for measurements per day contact,
+									or appoint a date convenient for you
+								</div>
+							</div>
+							<div class="steps__point color-white">
+								<div class="steps__point-icon">02</div>
+								<div class="steps__point-text">Free metering</div>
+							</div>
+							<div class="steps__point color-white">
+								<div class="steps__point-icon">03</div>
+								<div class="steps__point-text">Free consultation</div>
+							</div>
+							<div class="steps__point color-white">
+								<div class="steps__point-icon">04</div>
+								<div class="steps__point-text">
+									Get a cost estimate and the timing of your future repairs
+								</div>
+							</div>
+						</div>
+						<div class="steps__form-wrap">
+							<form class="bg-black steps__form">
+								<div class="steps__form-title">
+									Leave a request for free<br />
+									departure of the measurer
+								</div>
+								<div class="form-element">
+									<label>Name</label>
+									<input type="text" placeholder="What is your name:" />
+								</div>
+								<div class="form-element">
+									<label>Phone</label>
+									<input type="phone" placeholder="Your phone number:" />
+								</div>
+								<div class="form-element">
+									<label>Email</label>
+									<input type="email" placeholder="Your email:" />
+								</div>
+								<div class="steps__form-checkbox">
+									<input type="checkbox" />
+									<span class="color-white">
+										I agree to the processing of personal data
+									</span>
+								</div>
+								<button class="form-button steps-button">
+									Call the measurer
+								</button>
+							</form>
+							<div class="steps__cheap">
+								<div class="steps__cheap-icon">
+									<img alt="Копилка" src="/assets/icons/pig.svg" />
+								</div>
+								<div class="steps__cheap-text">
+									Help save 10 - 20% of the<br />
+									cost of materials
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="design-bg">
+			<div class="section-content">
+				<div class="section-content__body">
+					<div class="design position-relative">
+						<div class="design__choice">
+							<div class="design__choice-title">
+								We realize your<br />
+								wildest fantasies
+							</div>
+							<div class="design__small-gallery bg-image">
+								<img
+									class="slider-icon prev"
+									alt="Предыдущая картинка"
+									src="/assets/icons/small_slider/prev.svg"
+								/>
+								<img
+									class="slider-icon next"
+									alt="Следующая картинка"
+									src="/assets/icons/small_slider/next.svg"
+								/>
+							</div>
+							<ul class="design__choice-list">
+								<li class="design__choice-list-item">American classic</li>
+								<li class="design__choice-list-item">Empire</li>
+								<li class="design__choice-list-item">Classical</li>
+								<li class="design__choice-list-item">Loft</li>
+								<li class="design__choice-list-item">Minimalism</li>
+								<li class="design__choice-list-item">Provence</li>
+								<li class="design__choice-list-item">Romanticism</li>
+								<li class="design__choice-list-item">Scandinavian style</li>
+								<li class="design__choice-list-item">Mediterranean style</li>
+								<li class="design__choice-list-item">High Tech</li>
+								<li class="design__choice-list-item">Eclecticism</li>
+							</ul>
+						</div>
+						<div class="design__gallery">
+							<div
+								class="bg-image"
+								style="background-image: url(/assets/img/design/design1.png)"
+							></div>
+							<div
+								class="bg-image"
+								style="background-image: url(/assets/img/design/design2.png)"
+							></div>
+							<div
+								class="bg-image"
+								style="background-image: url(/assets/img/design/design3.png)"
+							></div>
+							<div
+								class="bg-image"
+								style="background-image: url(/assets/img/design/design4.png)"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="our-clients">
+			<div class="section-content">
+				<div class="section-content__body">
+					<div class="section-title section-title-center">
+						<span class="color-black">our clients</span>
+						<div class="section-title-center__icon-group">
+							<img alt="Линия" src="/assets/icons/title_icons/line.svg" />
+							<img
+								alt="Рукопожатие"
+								src="/assets/icons/title_icons/hands.svg"
+							/>
+							<img alt="Линия" src="/assets/icons/title_icons/line.svg" />
+						</div>
+					</div>
+					<div class="our-clients__title">
+						80% of our customers recommend us to their <br />friends and family.
+					</div>
+					<div class="our-clients__cards">
+						<div class="our-clients__card">
+							<div class="our-clients__card-main">
+								<div
+									class="our-clients__card-avatar bg-image"
+									style="background-image: url(/assets/img/clients/maria.png)"
+								></div>
+								<div class="our-clients__card-name">
+									Fedosova Maria <br />Konstantinovna
+								</div>
+							</div>
+							<div class="our-clients__card-text">
+								I want to thank the guys for their work. We put your shower part
+								in repair. I am very grateful that I referred to the repair as
+								to my own. Great thanks I express the project to Georgia for its
+								professionalism and approach. The repair process was turned out
+								in terms, faster than anticipated. Team mobile and professional.
+								Works performed qualitatively without comments. Quality
+								satisfied. Prices democratic. I recommend these masters.
+							</div>
+							<div class="card-button our-clients__card-info">
+								<div>
+									<img
+										alt="Количество квадратных метров"
+										src="/assets/icons/squarem.svg"
+									/>
+									40 m2
+								</div>
+								<div>
+									<img alt="Количество дней" src="/assets/icons/days.svg" />
+									48 DAYS
+								</div>
+							</div>
+						</div>
+						<div class="our-clients__card">
+							<div class="our-clients__card-main">
+								<div
+									class="our-clients__card-avatar bg-image"
+									style="background-image: url(/assets/img/clients/sergey.png)"
+								></div>
+								<div class="our-clients__card-name">
+									Afanasyev Sergey<br />
+									Alexandrovich
+								</div>
+							</div>
+							<div class="our-clients__card-text">
+								I want to thank the guys for their work. We put your shower part
+								in repair. I am very grateful that I referred to the repair as
+								to my own. Great thanks I express the project to Georgia for its
+								professionalism and approach. The repair process was turned out
+								in terms, faster than anticipated. Team mobile and professional.
+								Works performed qualitatively without comments. Quality
+								satisfied. Prices democratic. I recommend these masters.
+							</div>
+							<div class="card-button our-clients__card-info">
+								<div>
+									<img
+										alt="Количество квадратных метров"
+										src="/assets/icons/squarem.svg"
+									/>
+									90 m2
+								</div>
+								<div>
+									<img alt="Количество дней" src="/assets/icons/days.svg" />
+									128 DAYS
+								</div>
+							</div>
+						</div>
+						<div class="our-clients__card">
+							<div class="our-clients__card-main">
+								<div
+									class="our-clients__card-avatar bg-image"
+									style="background-image: url(/assets/img/clients/egor.png)"
+								></div>
+								<div class="our-clients__card-name">
+									Kiriev Egor<br />
+									Leonidovich
+								</div>
+							</div>
+							<div class="our-clients__card-text">
+								I want to thank the guys for their work. We put your shower part
+								in repair. I am very grateful that I referred to the repair as
+								to my own. Great thanks I express the project to Georgia for its
+								professionalism and approach. The repair process was turned out
+								in terms, faster than anticipated. Team mobile and professional.
+								Works performed qualitatively without comments. Quality
+								satisfied. Prices democratic. I recommend these masters.
+							</div>
+							<div class="card-button our-clients__card-info">
+								<div>
+									<img
+										alt="Количество квадратных метров"
+										src="/assets/icons/squarem.svg"
+									/>
+									56 m2
+								</div>
+								<div>
+									<img alt="Количество дней" src="/assets/icons/days.svg" />
+									86 DAYS
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<style>
+			.questions {
+				margin: 0 auto;
+				padding-bottom: 66px;
+				background: linear-gradient(
+						180deg,
+						rgba(0, 0, 0, 0.8) 0%,
+						rgba(0, 0, 0, 0.85) 100%
+					),
+					url(/assets/img/contactsbg.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			.questions__form {
+				width: 880px;
+				position: absolute;
+				transform: translateX(-50%);
+				left: 50%;
+				top: -225px;
+				padding: 34px 181px;
+				font-size: 14px;
+			}
+
+			.questions__form-title {
+				font-family: YesevaOne;
+				font-size: 20px;
+				line-height: 28px;
+				text-align: center;
+				text-transform: uppercase;
+				color: var(--color-white);
+				margin-bottom: 40px;
+			}
+
+			.questions__form-elements {
+				display: flex;
+				flex-direction: column;
+				gap: 48px;
+			}
+
+			.questions__form input {
+				caret-color: var(--color-white);
+				color: #fff;
+			}
+
+			.questions__form label {
+				color: rgba(255, 255, 255, 0.5);
+			}
+
+			.questions__form input::placeholder {
+				color: var(--color-white);
+			}
+
+			.questions__form button {
+				flex-grow: 0;
+				display: flex;
+				align-self: center;
+				justify-content: center;
+				align-items: center;
+			}
+
+			@media screen and (max-width: 1299px) {
+				.questions {
+					padding-top: 170px;
+					background-color: var(--bg-black);
+					background-image: none;
+				}
+
+				.questions__form {
+					position: relative;
+					top: 0;
+					left: 0;
+					transform: translate(0, 0);
+					padding: 0;
+					width: 100%;
+				}
+
+				.questions__form-elements {
+					gap: 60px;
+				}
+
+				.questions__form-title {
+					margin-bottom: 55px;
+				}
+
+				.form-element-group {
+					flex-direction: column;
+					gap: 60px;
+				}
+
+				.questions__form-agree {
+					text-align: left;
+				}
+
+				.questions__form button {
+					margin-top: -30px;
+					width: 100%;
+					max-width: 340px;
+				}
+			}
+		</style>
+		<section class="questions position-relative bg-black">
+			<form autocomplete="off" class="questions__form bg-black">
+				<div class="questions__form-title">Have any questions ?</div>
+				<div class="questions__form-elements">
+					<div class="form-element-group">
+						<div class="form-element flex-1">
+							<label>Name</label>
+							<input
+								autocomplete="off"
+								type="text"
+								placeholder="What is your name:"
+							/>
+						</div>
+						<div class="form-element flex-1">
+							<label>Phone</label>
+							<input
+								autocomplete="off"
+								type="phone"
+								placeholder="Your phone number:"
+							/>
+						</div>
+					</div>
+					<div class="form-element">
+						<label>Question</label>
+						<input
+							autocomplete="off"
+							type="email"
+							placeholder="I want to know:"
+						/>
+					</div>
+					<div class="text-center questions__form-agree">
+						<input type="checkbox" />
+						<span class="color-white">
+							I agree to the processing of personal data
+						</span>
+					</div>
+					<button class="form-button">Submit</button>
+				</div>
+			</form>
+			<style>
+				.contacts {
+					padding-top: 270px;
+				}
+
+				.contacts__wrap {
+					display: flex;
+					flex-direction: column;
+				}
+
+				.contacts__title {
+					color: var(--color-gold);
+					font-size: 20px;
+					line-height: 28px;
+					text-align: center;
+					text-transform: uppercase;
+				}
+
+				.contacts__icons {
+					display: flex;
+					gap: 15px;
+					justify-content: center;
+					margin-top: 26px;
+				}
+
+				.contacts__map {
+					width: 925px;
+					height: 465px;
+					background-image: url(/assets/img/map.png);
+					margin: 0 auto;
+					margin-top: 40px;
+				}
+
+				@media screen and (max-width: 1299px) {
+					.contacts {
+						padding-top: 0;
+					}
+
+					.contacts__icons,
+					.contacts__title {
+						order: 1;
+					}
+
+					.contacts__map {
+						width: 100%;
+						margin-top: 48px;
+						height: 256px;
+						margin-bottom: 40px;
+					}
+
+					.contacts__title {
+						font-size: 18px;
+						line-height: 138.6%;
+					}
+
+					.contacts__icons {
+						gap: 20px;
+					}
+					.contacts__icons > * {
+						width: 40px;
+					}
+
+					.contacts__telephone {
+						display: block;
+					}
+				}
+			</style>
+			<section class="contacts">
+				<div class="section-content">
+					<div class="section-content__body">
+						<div class="contacts__wrap">
+							<div class="contacts__title text-center">
+								Rostov-on-Don, Nansen St., 239 Shopping Center Decorum
+								<span class="contacts__telephone">Tel +7 (928) 768 32 29</span>
+							</div>
+							<div class="contacts__icons">
+								<img alt="email" src="/assets/icons/mail.svg" />
+								<img alt="instagram" src="/assets/icons/instagram.svg" />
+							</div>
+
+							<div class="contacts__map bg-image"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
 	</main>
-	<footer>
-		<section></section>
+	<footer class="sm-full-width">
+		<section class="footer-section">
+			<section class="footer__wrap">
+				<div class="footer__logo">IC "Repair Design Project"</div>
+				<ul class="footer__nav">
+					<li class="footer__nav-item">home</li>
+					<li class="footer__nav-item">projects</li>
+					<li class="footer__nav-item">measurement</li>
+					<li class="footer__nav-item">team</li>
+					<li class="footer__nav-item">reviews</li>
+					<li class="footer__nav-item">contacts</li>
+				</ul>
+				<div class="footer__contact">
+					<a href="tel:+79287683239">+7 (928) 768-32-39</a>
+					<button class="footer__button italic">Request a call</button>
+				</div>
+			</section>
+		</section>
 	</footer>
 </body>
