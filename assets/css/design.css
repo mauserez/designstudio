@@ -66,12 +66,12 @@
 
 .design__gallery > div:nth-child(2) {
 	grid-column: 4/7;
-	grid-row: 1/5;
+	grid-row: 1/6;
 }
 
 .design__gallery > div:nth-child(4) {
 	grid-column: 4/7;
-	grid-row: 5/13;
+	grid-row: 6/13;
 }
 
 .design__gallery > * {
@@ -117,5 +117,19 @@
 
 	.design__gallery {
 		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1299px) {
+	.repair-types {
+		padding-bottom: 450px;
+	}
+
+	.design__small-gallery {
+		height: 400px;
+	}
+
+	.design__choice {
+		top: -300px;
 	}
 }

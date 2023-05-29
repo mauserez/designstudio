@@ -275,7 +275,7 @@
 
 	.projects__feedback {
 		width: 100%;
-		margin-top: 0;
+		margin-top: -1px;
 		background-color: var(--bg-black);
 		color: var(--color-white);
 		margin-bottom: 80px;
@@ -333,5 +333,12 @@
 
 	.projects__checkbox-wrap input {
 		margin-left: 0;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1299px) {
+	.projects__small-gallery,
+	.projects__video {
+		height: 400px;
 	}
 }

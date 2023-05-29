@@ -13,10 +13,12 @@
 
 html {
 	scroll-behavior: smooth;
+	background-color: var(--bg-black);
 }
 
 body {
 	font-family: NuniSans, Helvetica, Arial, Helvetica, sans-serif;
+	background-color: var(--bg-white);
 }
 * {
 	box-sizing: border-box;
@@ -195,7 +197,7 @@ input[type="checkbox"] {
 
 .form-element input:not([type="checkbox"]) {
 	border: none;
-	border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 	padding-bottom: 8px;
 	width: 100%;
 	background: transparent;
@@ -237,6 +239,33 @@ input[type="checkbox"] {
 
 .slider-icon.prev {
 	left: 13px;
+}
+
+.scroll-top {
+	position: fixed;
+	right: 30px;
+	bottom: 40px;
+	width: 50px;
+	height: 50px;
+	background-color: var(--bg-gold);
+	color: var(--color-gold);
+	font-size: 35px;
+	font-family: Helvetica, Arial;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-weight: bold;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 1;
+}
+
+.scroll-top a {
+	text-decoration: none;
+	color: var(--color-white);
+	margin-top: -5px;
+	display: block;
 }
 
 @media screen and (max-width: 1299px) {
